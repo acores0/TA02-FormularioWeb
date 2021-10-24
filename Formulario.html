@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Registro ¡DESWEB</title>
+</head>
+<body>
+    <header>
+        <figure>
+            <h1><img src="Logo.png" alt="Logo de la empresa ¡DESWEB"></h1>
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="Formulario.html">Alta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Formulario de registro</h2>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>&nbsp;¿Quién eres?&nbsp;</legend>
+                <div id="nombreApellidos">
+                    <label for="nombre">Nombre *</label>
+                    <input type="text" name="nombre" id="nombre" autofocus autocomplete="on" placeholder="Introduce tu nombre" required>
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" name="apellidos" id="apellidos" autocomplete="on" placeholder="Introduce tus apellidos">
+                </div>
+                <div id="email">
+                    <label for="correo">Correo electrónico *</label>
+                    <input type="email" name="correo" id="correo" autocomplete="on" placeholder="correo@example.com" required>
+                </div>
+                <div id="dataNacemento">
+                    <label for="fechaNacimiento">Fecha Nacimiento *</label>
+                    <input type="date" name="fechaNacimiento" id="fechaNacimiento" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>&nbsp;¿De dónde eres?&nbsp;</legend>
+                <div id="cidade">
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" name="ciudad" id="ciudad" placeholder="Introduce la ciudad dónde vives" autocomplete="on">
+                </div>
+                <div id="codigoPostal">
+                    <label for="cp">Código Postal</label>
+                    <input type="number" name="cp" id="cp" max="99999" placeholder="Introduce el código postal: 12345">
+                </div>
+                <div id="pais">
+                    <label for="paises">País *</label>
+                    <select id="paises" name="paises" required>
+                        <option value="">Seleccione un país</option>
+                        <optgroup label="Europa">
+                            <option value="España">España</option>
+                            <option value="Francia">Francia</option>
+                            <option value="Italia">Italia</option>
+                        </optgroup>
+                        <optgroup label="America">
+                            <option value="EEUU">Estados Unidos</option>
+                            <option value="Mejico">Méjico</option>
+                            <option value="Cuba">Cuba</option>
+                        </optgroup>
+                        <optgroup label="Asia">
+                            <option value="India">India</option>
+                            <option value="China">China</option>
+                            <option value="Japon">Japón</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>&nbsp;¿Cómo quieres iniciar sesión?&nbsp;</legend>
+                <div id="nomeUsuario">
+                    <label for="nombreUsuario">Nombre Usuario *</label>
+                    <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Introduce un usuario" required>
+                </div>
+                <div id="passwd">
+                    <label for="contrasena">Contraseña *</label>
+                    <input type="password" name="contrasena" id="contrasena" placeholder="Introduce una contraseña" required>
+                </div>
+                <div id="passwd2">
+                    <label for="contrasena2">Vuelve a escribir la contraseña *</label>
+                    <input type="password" name="contrasena2" id="contrasena2" placeholder="Repite la contraseña anterior" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>&nbsp;Condiciones de registro&nbsp;</legend>
+                <div id="ofertas">
+                    <p>Deseo recibir ofertas de ¡DESWEB</p>
+                    <label><input type="radio" name="recibirOfertas" value="dia"> Una vez al día</label>
+                    <label><input type="radio" name="recibirOfertas" value="semana"> Una vez a la semana</label>                <label><input type="radio" name="recibirOfertas" value="mes"> Una vez al mes</label>            
+                </div>
+                <div id="declaracion">
+                    <input type="checkbox" name="acuerdo" id="acuerdo" required>
+                    <label for="acuerdo">* Acepto el acuerdo de servicios, la declaración de privacidad y la declaración de uso de cookies</label>
+                </div>
+            </fieldset>
+            <div id="camposObligatorios">
+                <p>Los campos con un * son obligatorios</p>
+            </div>
+            <div id="botonEnviar">
+                <input type="submit" name="enviar" id="enviar" value="Crear cuenta">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <a href="http://www.w3.org/WAI/WCAG1AA-Conformance" title="Explicación del Nivel Doble-A de Conformidad"><img height="32" width="88" src="http://www.w3.org/WAI/wcag1AA" alt="Icono de conformidad con el Nivel Doble-A, de las Directrices de Accesibilidad para el Contenido Web 1.0 del W3C-WAI"></a>
+        <p>Esta página cumple con los estándares de conformidad AA de las Directrices de Accesibilidad</p>
+    </footer>
+</body>
+</html>

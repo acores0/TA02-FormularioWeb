@@ -14,7 +14,7 @@
         </figure>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html" ari>Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
@@ -29,8 +29,10 @@
                 <legend>&nbsp;¿Quién eres?&nbsp;</legend>
                 <div id="nombreApellidos">
                     <label for="nombre">Nombre *</label>
+                    <!-- te falta la expresión regular para validar el campo-->
                     <input type="text" name="nombre" id="nombre" autofocus autocomplete="on" placeholder="Introduce tu nombre" required>
                     <label for="apellidos">Apellidos</label>
+                    <!-- te falta la expresión regular para validar el campo-->
                     <input type="text" name="apellidos" id="apellidos" autocomplete="on" placeholder="Introduce tus apellidos">
                 </div>
                 <div id="email">
@@ -39,7 +41,12 @@
                 </div>
                 <div id="dataNacemento">
                     <label for="fechaNacimiento">Fecha Nacimiento *</label>
-                    <input type="date" name="fechaNacimiento" id="fechaNacimiento" required>
+                    <!-- <input type="date" name="fechaNacimiento" id="fechaNacimiento" required> -->
+                    <!-- puedes usar esto o -->
+                    <label for="dia" class="oculta">dia</label><input type="number" id="dia" name="dia" min="1" class="numero2" max="31" size="4" value="dia" placeholder="dia" required>
+                    <label for="mes" class="oculta">mes</label><input type="number" id="mes" name="mes" min="1" max="12" class="numero2" size="4" placeholder="mes" required>
+                    <label for="year" class="oculta">año</label><input type="number" id="year" name="year" min="1900" max="2013" class="numero4" value="año" size="4" placeholder="año" required>
+
                 </div>
             </fieldset>
             <fieldset>
@@ -50,7 +57,8 @@
                 </div>
                 <div id="codigoPostal">
                     <label for="cp">Código Postal</label>
-                    <input type="number" name="cp" id="cp" max="99999" placeholder="Introduce el código postal: 12345">
+                    <!-- el codigo postal no es de tipo number ya que necesitamos mínimo 5 digitos -->
+                    <input type="text" name="cp" id="cp" placeholder="Introduce el código postal: 12345" pattern="\d{5}">
                 </div>
                 <div id="pais">
                     <label for="paises">País *</label>
@@ -93,8 +101,11 @@
                 <legend>&nbsp;Condiciones de registro&nbsp;</legend>
                 <div id="ofertas">
                     <p>Deseo recibir ofertas de ¡DESWEB</p>
-                    <label><input type="radio" name="recibirOfertas" value="dia"> Una vez al día</label>
-                    <label><input type="radio" name="recibirOfertas" value="semana"> Una vez a la semana</label>                <label><input type="radio" name="recibirOfertas" value="mes"> Una vez al mes</label>            
+                    <!-- al pasar el código por https://achecker.achecks.ca/checker te avisa de que tienes que añadir el texto a la etiqueta
+                      eso es debido a que tu tendías dentro de la etiqueta input y esta, como ves, tiene que estar fuera -->
+                    <input type="radio" name="diaria" id="diaria" value="dia"><label for="diaria">Una vez al día</label>
+                    <input type="radio" name="semanal" id="semanal" value="semana"><label for="semanal">Una vez a la semana</label>                
+                    <input type="radio" name="mensual" id="mensual" value="mes"><label for="mensual">Una vez al mes</label>            
                 </div>
                 <div id="declaracion">
                     <input type="checkbox" name="acuerdo" id="acuerdo" required>

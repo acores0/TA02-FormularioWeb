@@ -1,19 +1,31 @@
 /*Base*/
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* está todo bien pero en estos momentos no se pide usar flex ya que no lo hemos visto,
+tendrías que maquetar con posicionamiento */
+
+/* para que la página sea accesible ser recomienda : El tamaño de la fuente debe ser suficiente, no aconsejándose bajar de 12 puntos (0.84 em) 
+y recomendándose utilizar el tamaño de 14 puntos (1.171 em)
+*/
+body {
+    font-size: 1.171em;
+}
+
 /*Cabecera*/
-header{
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 1rem 0;
 }
 
-header figure{
+header figure {
     width: 30%;
     padding-left: 2rem;
 }
@@ -22,178 +34,178 @@ header figure img {
     width: 40%;
 }
 
-
 /*Menú*/
-header nav{
+
+header nav {
     width: 70%;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     display: flex;
     justify-content: right;
     padding-right: 4rem;
 }
 
-nav ul li{
+nav ul li {
     padding: 1rem;
 }
 
-nav ul li:first-child{
+nav ul li:first-child {
     color: #ffffff;
-    background-color:  #08d9d6;
+    background-color: #08d9d6;
 }
 
-nav li a{
+nav li a {
     text-decoration: none;
     color: #000000;
     padding: 0.5rem 1rem;
 }
 
-nav li:hover{
-    background-color: #08d9d6
+nav li:hover {
+    background-color: #08d9d6;
 }
 
-nav li a:hover{
+nav li a:hover {
     color: #ffffff;
 }
 
-
 /*Contenido*/
-main{
+
+main {
     margin: 2rem 3rem;
 }
 
-
 /*Formulario*/
-main form{
+
+main form {
     margin-top: 1rem;
 }
 
-form fieldset{
+form fieldset {
     margin: 1rem 0;
     padding: 1rem;
 }
 
-form fieldset legend{
+form fieldset legend {
     white-space: pre;
 }
 
-form fieldset div{
+form fieldset div {
     margin: 0.5rem 0;
 }
 
-label{
+label {
     margin-right: 0.5rem;
 }
 
-input[type="text"], input[type="password"], input[type="number"]{
+/* input[type="text"], input[type="password"], input[type="number"] { */
+    input[type="text"], input[type="password"] { 
     width: 20%;
 }
 
-form #nombreApellidos #nombre{
+form #nombreApellidos #nombre {
     margin-right: 1rem;
 }
 
 form #ofertas {
     display: flex;
-
 }
 
-
-#ofertas p{
+#ofertas p {
     margin-right: 1rem;
 }
 
-#camposObligatorios{
-    margin: 1rem 0 ;
+#camposObligatorios {
+    margin: 1rem 0;
 }
 
-#botonEnviar input{
+#botonEnviar input {
     padding: 0.5rem;
 }
 
+.oculta {
+    display: none;
+    width: 0;
+}
+.numero2 {
+    width: 3em;
+  }
+.numero4 {
+    width: 4em;
+  }
 /*Pie de página */
-footer{
+
+footer {
     margin: 1rem 0;
     display: flex;
     align-items: center;
 }
 
-footer a{
+footer a {
     padding-left: 3rem;
 }
 
-footer p{
+footer p {
     margin-left: 1rem;
 }
 
 /*Diseño responsive*/
-    /*Versión tablet*/
-    @media only screen and (max-width: 600px) {
-        header{
-            flex-wrap: wrap;
-            justify-content: center;
-        }
 
-        header figure{
-            width: 100%;
-            text-align: center;
-            padding: 0;
-        }
+/*Versión tablet*/
 
-        header figure img{
-            width: 30%;
-        }
-
-        header nav{
-            width: 100%;
-            margin: 0.5rem 0;
-        }
-
-        nav ul{
-            justify-content: center;
-            padding-right: 0;
-        }
-
-        form #nombreApellidos input{
-            width: 30%;
-        }
-
-        form fieldset:nth-child(2) input{
-            width: 50%;
-        }
-
-        form fieldset:nth-child(3) input{
-            width: 40%;
-        }
-
-        form #ofertas{
-            flex-wrap: wrap;
-        }
-
-        form #ofertas p{
-            width: 100%;
-            margin-right: 0;
-        }
-        
+@media only screen and (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
     }
-
-    /*Versión móvil*/
-    @media only screen and (max-width: 400px) {
-        nav ul{
-            flex-wrap: wrap;
-        }
-
-        form fieldset:nth-child(1) input, form fieldset:nth-child(2) input, form fieldset:nth-child(3) input{
-            width: 100%;
-        }
-        
-        form #nombreApellidos input{
-            width: 100%;
-        }
-
-        footer p{
-            padding-right: 1rem;
-        }
+    header figure {
+        width: 100%;
+        text-align: center;
+        padding: 0;
     }
+    header figure img {
+        width: 30%;
+    }
+    header nav {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    nav ul {
+        justify-content: center;
+        padding-right: 0;
+    }
+    form #nombreApellidos input {
+        width: 30%;
+    }
+    form fieldset:nth-child(2) input {
+        width: 50%;
+    }
+    form fieldset:nth-child(3) input {
+        width: 40%;
+    }
+    form #ofertas {
+        flex-wrap: wrap;
+    }
+    form #ofertas p {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/*Versión móvil*/
+
+@media only screen and (max-width: 400px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+    form fieldset:nth-child(1) input, form fieldset:nth-child(2) input, form fieldset:nth-child(3) input {
+        width: 100%;
+    }
+    form #nombreApellidos input {
+        width: 100%;
+    }
+    footer p {
+        padding-right: 1rem;
+    }
+}
